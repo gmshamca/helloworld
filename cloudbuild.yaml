@@ -20,5 +20,5 @@ steps:
         git branch
         cd modules/cloud_run
         terraform init
-        terraform apply  -var="project_id=ingrammicroproject-352014" -var="imagename=gcr.io/$PROJECT_ID/ingram-spring-outpu"  -var="deploy_run_service_name=ingram-spring-outpu" -auto-approve    
+        terraform apply  -var="project_id=ingrammicroproject-352014" -var="imagename=gcr.io/$PROJECT_ID/ingram-spring-output"  -var="deploy_run_service_name=ingram-spring-output" -auto-approve    
 
