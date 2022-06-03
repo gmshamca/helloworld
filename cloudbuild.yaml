@@ -10,15 +10,15 @@ steps:
 #     args: ["build", "-t", "gcr.io/$PROJECT_ID/ingram-spring-output", "--build-arg=JAR_FILE=target/helloworld-0.0.1-SNAPSHOT.jar", "."]
   - name: gcr.io/cloud-builders/docker
     args: ["push", "gcr.io/$PROJECT_ID/ingram-spring-output"]
-  - name: hashicorp/terraform:1.0.0
-    entrypoint: 'sh'
-    args: 
-     - '-c'
-     - | 
-        git clone --branch gcp https://github.com/gmshamca/MicroIngramTerraformmNew.git
-        cd MicroIngramTerraformmNew
-        git branch
-        cd modules/cloud_run
-        terraform init
-        terraform apply   -var="imagename=gcr.io/$PROJECT_ID/ingram-spring-output"  -var="deploy_run_service_name=ingram-spring-output" -auto-approve    
+#   - name: hashicorp/terraform:1.0.0
+#     entrypoint: 'sh'
+#     args: 
+#      - '-c'
+#      - | 
+#         git clone --branch gcp https://github.com/gmshamca/MicroIngramTerraformmNew.git
+#         cd MicroIngramTerraformmNew
+#         git branch
+#         cd modules/cloud_run
+#         terraform init
+#         terraform apply   -var="imagename=gcr.io/$PROJECT_ID/ingram-spring-output"  -var="deploy_run_service_name=ingram-spring-output" -auto-approve    
 
