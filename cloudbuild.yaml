@@ -20,5 +20,5 @@ steps:
         git branch
         cd modules/cloud_run
         terraform init
-        terraform apply   -var="imagename=gcr.io/$PROJECT_ID/ingram-spring-output"  -var="service-name=ingram-spring-output"  -auto-approve    
+        terraform apply   -var="imagename=gcr.io/$PROJECT_ID/ingram-spring-output-image"  -var="service-name=ingram-spring-output"  -auto-approve    
 
