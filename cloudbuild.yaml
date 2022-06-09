@@ -21,4 +21,4 @@ steps:
         git branch
         cd modules/cloud_run
         terraform init
-        terraform apply 
+        terraform apply -auto-approve
