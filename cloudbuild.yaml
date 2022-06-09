@@ -11,3 +11,14 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args: ["push", "gcr.io/$PROJECT_ID/maven-project"]
    
+  - name: hashicorp/terraform:1.0.0
+    entrypoint: 'sh'
+    args: 
+     - '-c'
+     - | 
+        git clone --branch gcp https://github.com/gmshamca/MicroIngramTerraformmNew.git
+        cd MicroIngramTerraformmNew
+        git branch
+        cd modules/cloud_run
+        terraform init
+        terraform apply 
